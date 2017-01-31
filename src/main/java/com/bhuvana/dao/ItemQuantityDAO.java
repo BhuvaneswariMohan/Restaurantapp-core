@@ -21,7 +21,7 @@ public class ItemQuantityDAO {
 	public void save(final ItemQuantity item) {
 		final String sql = "insert into item_quantity(ID,FOOD_TYPE,MENU_TYPE,QTY)"
 				+ "values (?,?,?,?) ";
-		final Object[] params = { item.getID(), item.getFoodType(), item.getMenuType(),item.getQty()
+		final Object[] params = { item.getID(), item.getFoodType().getId(), item.getMenuType().getId(),item.getQty()
 				 };
 		 jdbcTemplate.update(sql, params);
 		
@@ -48,7 +48,7 @@ public class ItemQuantityDAO {
 	
 	public List<ItemQuantity> list() {
 		final String sql = "Select ID,FOOD_TYPE,MENU_TYPE,QTY from item_quantity";
-		return jdbcTemplate.query(sql, (rs, rowNum) -> {
+		return jdbcTemplate.query(sql, (rs, rowNum)-> {
 			return convert(rs);
 			 
 		});

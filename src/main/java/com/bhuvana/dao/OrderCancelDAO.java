@@ -1,7 +1,5 @@
 package com.bhuvana.dao;
 
-
-
 import java.sql.Types;
 import java.util.Map;
 
@@ -13,8 +11,6 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.simple.SimpleJdbcCall;
 
 import com.bhuvana.util.ConnectionUtil;
-
-
 
 public class OrderCancelDAO {
 
@@ -33,4 +29,3 @@ public class OrderCancelDAO {
 
 	}
 }
-
