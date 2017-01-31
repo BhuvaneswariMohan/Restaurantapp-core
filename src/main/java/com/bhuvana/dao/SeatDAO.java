@@ -51,10 +51,10 @@ public class SeatDAO {
 	
 	public Seat convert(final ResultSet rs) throws SQLException {
 		final Seat seat = new Seat();
-		seat.setId(rs.getInt("ID"));
-		seat.setSeatNo(rs.getInt("SEAT_NO"));
-		seat.setSeatStatus(rs.getString("SEAT_STATUS"));
-		seat.setCheckSeat(rs.getInt("CHECK_SEAT"));
+		//seat.setId(rs.getInt("ID"));
+		///seat.setSeatNo(rs.getInt("SEAT_NO"));
+		//seat.setSeatStatus(rs.getString("SEAT_STATUS"));
+		//seat.setCheckSeat(rs.getInt("CHECK_SEAT"));
 		return seat;
 	}
 

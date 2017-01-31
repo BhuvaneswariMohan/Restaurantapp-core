@@ -28,8 +28,8 @@ import com.bhuvana.util.ConnectionUtil;
 	                		
 	                        new SqlParameter("SEAT", Types.INTEGER),
 	                        new SqlParameter("ITEM", Types.VARCHAR),
-	                        new SqlParameter("QUANTITY", Types.INTEGER),
-	                        new SqlOutParameter("MESSAGE", Types.VARCHAR));
+	                        new SqlParameter("QUANTITY", Types.INTEGER));
+	                       // new SqlOutParameter("MESSAGE", Types.VARCHAR));
 	        call.setAccessCallParameterMetaData(false);
 	        
 	        SqlParameterSource in = new MapSqlParameterSource().addValue("SEAT",seatNo)

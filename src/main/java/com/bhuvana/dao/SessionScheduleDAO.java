@@ -50,10 +50,10 @@ import com.bhuvana.util.ConnectionUtil;
 
 		static SessionSchedule convert(final ResultSet rs) throws SQLException {
 			final SessionSchedule category = new SessionSchedule();
-			category.setId(rs.getInt("ID"));
-			category.setFoodtype(rs.getString("CATEGORY_DESCRIPTION"));
-			category.setStarttime(rs.getTime("START_TIME").toLocalTime());
-			category.setEndtime(rs.getTime("END_TIME").toLocalTime());
+			//category.setId(rs.getInt("ID"));
+			//category.setFoodtype(rs.getString("CATEGORY_DESCRIPTION"));
+			//category.setStarttime(rs.getTime("START_TIME").toLocalTime());
+			//category.setEndtime(rs.getTime("END_TIME").toLocalTime());
 			return category;
 		}
 	}
