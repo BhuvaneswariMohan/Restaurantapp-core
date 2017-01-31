@@ -10,8 +10,8 @@ public class TestSeatDAO {
 
 	 Seat seat = new Seat();
 
-		 seat.setId(9);
-		 seat.setId(9);
+		 seat.setId(11);
+		 seat.setSeatNo(11);
 		 seat.setSeatStatus("AVAILABLE");
 		 seat.setCheckSeat(0);
 

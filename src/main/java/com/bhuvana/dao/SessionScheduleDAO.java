@@ -20,23 +20,23 @@ import com.bhuvana.util.ConnectionUtil;
 			final String sql = "insert into session_schedule (ID,FOOD_TYPE,START_TIME,END_TIME) values (?,?,?,?) ";
 			final Object[] params = { category.getId(), category.getFoodtype(), category.getStarttime(),
 					category.getEndtime() };
-			final int rows = jdbcTemplate.update(sql, params);
-			System.out.println(rows);
+			jdbcTemplate.update(sql, params);
+			
 		}
 
 		
 		public void delete(final int id) {
 			final String sql = "delete from session_schedule where ID=?";
 			final Object[] params = { id };
-			final int rows = jdbcTemplate.update(sql, params);
-			System.out.println(rows);
+			 jdbcTemplate.update(sql, params);
+			
 		}
 
 		public void update(final SessionSchedule category) {
 			final String sql = "update session_schedule set category_description=? where ID=?";
 			final Object[] params = { category.getFoodtype(), category.getId() };
-			final int rows = jdbcTemplate.update(sql, params);
-			System.out.println(rows);
+		 jdbcTemplate.update(sql, params);
+		
 		}
 
 		public List<SessionSchedule> list() {

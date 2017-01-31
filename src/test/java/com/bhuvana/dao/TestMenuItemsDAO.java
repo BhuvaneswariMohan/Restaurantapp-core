@@ -9,7 +9,7 @@ public class TestMenuItemsDAO {
 
 		MenuItems itemPrice = new MenuItems();
 
-		 itemPrice.setId(18);
+		 itemPrice.setId(19);
 		 itemPrice.setFoodItem("milk");
 		 itemPrice.setRate(30);
 

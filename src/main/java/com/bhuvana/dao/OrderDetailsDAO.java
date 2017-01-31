@@ -50,7 +50,7 @@ import com.bhuvana.util.ConnectionUtil;
 				seat.setSeatNo(rs.getInt("SEAT_NO"));
 				orderItem.setSeatNo(seat);
 			    MenuItems itemPrice=new MenuItems();
-				itemPrice.setFoodItem(rs.getString("FOOD_ITEMS"));
+				itemPrice.setFoodItem(rs.getString("FOOD_ITEM"));
 				orderItem.setFoodItem(itemPrice);
 				orderItem.setQty(rs.getInt("QTY"));
 				orderItem.setBillAmount(rs.getInt("BILL_AMOUNT"));

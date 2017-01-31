@@ -9,17 +9,11 @@ import com.bhuvana.model.OrderDetails;
 
 
 
-public class TestOrderDetailsDAO {
+public class TestOrderDetailsDAO {                              
 
 	public static void main(final String[] args) {
 
 		OrderDetailsDAO orderItemDAO = new OrderDetailsDAO();
-		
-		
-
-	
-        
-
 	 //OrderDetailsDAO.save(orderItem);
 	// OrderDetailsDAO.delete(5);
 		

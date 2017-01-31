@@ -36,7 +36,7 @@ import com.bhuvana.util.ConnectionUtil;
 	        													.addValue("ITEM", foodItem)
 	        													.addValue("QUANTITY",qty );
 	        Map<String, Object> execute = call.execute(in);
-	        String status = (String) execute.get("MESSAGE");
+	        String status = (String) execute.get(execute);
 	        return status;
 	 
 	    }

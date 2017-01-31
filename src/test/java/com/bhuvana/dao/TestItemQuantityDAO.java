@@ -17,25 +17,25 @@ import com.bhuvana.model.ItemQuantity;
 		 ItemQuantityDAO itemDAO = new ItemQuantityDAO();
 			
 		 
-//		ItemQuantity  item = new ItemQuantity();
+	ItemQuantity  item = new ItemQuantity();
 
-//		  item.setSno(17);
-//		  item.setMealid(4);
-//		  item.setFoodid(17);
-//	      item.setQuantity(300);
-	// 
+	// item.setID(17);
+		//  item.setFoodType(4);
+		//  item.setMenuType(17);
+	   //  item.setQty(300);
+	 
 
 
-//		 itemDAO.save( item);
-		// itemDAO.delete(17);
+		 itemDAO.save( item);
+		 itemDAO.delete(17);
 		 
 		 List<ItemQuantity> list=itemDAO.list();
 			Iterator i=list.iterator();
 			while(i.hasNext())
 			{
-				ItemQuantity  item = (ItemQuantity) i.next();
-				System.out.println( item.getID()+"\t"+ item.getFoodType().getId()+"\t"+ item.getMenuType().getId()
-						+"\t"+ item.getQty());
+				ItemQuantity item1 = (ItemQuantity) i.next();
+				System.out.println( item1.getID()+"\t"+ item1.getFoodType().getId()+"\t"+ item1.getMenuType().getId()
+						+"\t"+ item1.getQty());
 				
 			}
 			

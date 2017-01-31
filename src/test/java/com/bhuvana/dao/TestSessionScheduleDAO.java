@@ -17,14 +17,14 @@ package com.bhuvana.dao;
 		 
 		 SessionSchedule category = new  SessionSchedule();
 
-		 category.setId(5);
+		 category.setId(8);
 		 category.setFoodtype("Lunch");
 		 category.setStarttime(LocalTime.parse("23:15:00"));
 		 category.setEndtime(LocalTime.parse("01:15:00"));
 
 
 		 categoryDAO.save(category);
-		// foodtypeDAO.delete(5);
+		//categoryDAO.delete(5);
 			
 		}
 }

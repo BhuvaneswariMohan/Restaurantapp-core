@@ -17,7 +17,7 @@ package com.bhuvana.dao;
 			
 			
 			
-			String status = orderdao.placeOrder(2,"south indian meals",2,"@message");
+			String status = orderdao.placeOrder(2,"coffee",2,"@message");
 			System.out.println(status);
 
 		}
