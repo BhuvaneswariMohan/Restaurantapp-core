@@ -42,18 +42,18 @@ import com.bhuvana.util.ConnectionUtil;
 		public List<SessionSchedule> list() {
 			final String sql = "select ID,CATEGORY_DESCRIPTION,START_TIME,END_TIME from category_master";
 			return jdbcTemplate.query(sql, (rs, rowNum) -> {
-				final SessionSchedule  category = convert(rs);
-				return category;
+		    return convert(rs);
+ 
 			});
 
 		}
 
 		static SessionSchedule convert(final ResultSet rs) throws SQLException {
 			final SessionSchedule category = new SessionSchedule();
-			//category.setId(rs.getInt("ID"));
-			//category.setFoodtype(rs.getString("CATEGORY_DESCRIPTION"));
-			//category.setStarttime(rs.getTime("START_TIME").toLocalTime());
-			//category.setEndtime(rs.getTime("END_TIME").toLocalTime());
+			category.setId(rs.getInt("ID"));
+			category.setFoodtype(rs.getString("CATEGORY_DESCRIPTION"));
+			category.setStarttime(rs.getTime("START_TIME").toLocalTime());
+			category.setEndtime(rs.getTime("END_TIME").toLocalTime());
 			return category;
 		}
 	}

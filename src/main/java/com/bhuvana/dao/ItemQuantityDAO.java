@@ -49,8 +49,8 @@ public class ItemQuantityDAO {
 	public List<ItemQuantity> list() {
 		final String sql = "Select ID,FOOD_TYPE,MENU_TYPE,QTY from item_quantity";
 		return jdbcTemplate.query(sql, (rs, rowNum) -> {
-			final ItemQuantity item = convert(rs);
-			return item;
+			return convert(rs);
+			 
 		});
 	}
 

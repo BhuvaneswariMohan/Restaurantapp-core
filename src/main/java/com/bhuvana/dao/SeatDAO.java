@@ -43,18 +43,17 @@ public class SeatDAO {
 	public List<Seat> list() {
 		final String sql = "Select ID,SEAT_NO,SEAT_STATUS from seat";
 		return jdbcTemplate.query(sql, (rs, rowNum) -> {
-			final Seat seat = convert(rs);
-			return seat;
+			return convert(rs);
 		});
 
 	}
 	
 	public Seat convert(final ResultSet rs) throws SQLException {
 		final Seat seat = new Seat();
-		//seat.setId(rs.getInt("ID"));
-		///seat.setSeatNo(rs.getInt("SEAT_NO"));
-		//seat.setSeatStatus(rs.getString("SEAT_STATUS"));
-		//seat.setCheckSeat(rs.getInt("CHECK_SEAT"));
+		seat.setId(rs.getInt("ID"));
+		seat.setSeatNo(rs.getInt("SEAT_NO"));
+		seat.setSeatStatus(rs.getString("SEAT_STATUS"));
+		seat.setCheckSeat(rs.getInt("CHECK_SEAT"));
 		return seat;
 	}
 

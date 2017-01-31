@@ -38,8 +38,8 @@ import com.bhuvana.util.ConnectionUtil;
 		public List<OrderDetails> list() {
 			final String sql = "Select ID,SEAT_NO,FOOD_ITEM,QTY,BILL_AMOUNT,ORDER_DATE,STATUS from order_records";
 			return jdbcTemplate.query(sql, (rs, rowNum) -> {
-				final OrderDetails item = convert(rs);
-				return item;
+				return  convert(rs);
+				
 			});
 		}
 	

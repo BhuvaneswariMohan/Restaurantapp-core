@@ -38,8 +38,8 @@ package com.bhuvana.dao;
 		public List<MenuItems> list() {
 			final String sql = "select ID,FOOD_ITEMS,RATE from menu_items";
 			return jdbcTemplate.query(sql, (rs, rowNum) -> {
-				final MenuItems itemPrice = convert(rs);
-				return itemPrice;
+				return  convert(rs);
+			
 
 			});
 		}
